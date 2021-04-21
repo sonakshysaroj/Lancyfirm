@@ -51,18 +51,18 @@
 
 
   
-<body >
+<body onload="Function()">
  
-    <div class="load1">
+    <div id="load1">
       <div class="pre-loader-lancy">
           <div class="part1">
               <img src="assets/img/crown.png" style="width:10rem;height:150px;" >
               
           </div>
           <div class="loader1">
-              <div class="loading1">
-              </div>
+            <div class="loading1">
             </div>
+          </div>
       
           </div>
     
@@ -1029,17 +1029,18 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <script>
-    var myVar;
-    
-    function myFunction() {
-      myVar = setTimeout(showPage, 3000);
-    }
-    
-    function showPage() {
-      document.getElementsByClassName("load1").style.display = "none";
-      document.getElementById("loby").style.display="block";
-    }
-    </script>
+
+var timeout;
+function Function(){
+  timeout = setTimeout(myFunction, 1500);
+}
+    var preloader = document.getElementById('load1');
+function myFunction(){
+  preloader.style.display='none';
+}
+
+  </script>
+ 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
